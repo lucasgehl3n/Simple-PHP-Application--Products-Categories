@@ -50,18 +50,13 @@ class Categorias_model extends CI_Model {
 	$this->db->delete('produto'); //deleta associações de produtos */
 
 
-
-
 		$this->db->where('idCategoria',$idCategoria);
 		$query= $this->db->delete('categoria'); 
-		echo $this->db->last_query(); 
-		if($this->db->affected_rows()>0){ 
-					//print_r(mysqli_query($query)) ;
 
+		if($this->db->affected_rows()>0){ 
 			return 1; 
 		}
 
-		//print_r(mysqli_query($query)) ;
 
 		return 0;
 	}

@@ -4,20 +4,29 @@ class Produtos_model extends CI_Model {
 
 	public function inserirProduto($produto){
 
-		$data = array(
-			'nome' => $produto['nomeProduto'],
-			'valor' => $produto['valor'],
-			'categoria_idCategoria' => $produto['categoriaProduto'],
-			'quantidade' => $produto['quantidade'],
-			'descricao' => $produto['descProduto']
-			//'caminhoImagem'
-		);
+		if(!isset($_SESSION)){
+			$this->load->library('session');
+		}
+
+		if(null!==($this->session->userdata('usuario'))){
+
+			$data = array(
+				'nome' => $produto['nomeProduto'],
+				'valor' => $produto['valor'],
+				'categoria_idCategoria' => $produto['categoriaProduto'],
+				'quantidade' => $produto['quantidade'],
+				'descricao' => $produto['descProduto']
+			);
 
 
-		if ($this->db->insert('produto', $data)) {
-			return true;
-		} else {
-			return false;
+			if ($this->db->insert('produto', $data)) {
+				return true;
+			} 
+
+			else {
+				return false;
+			}
+
 		}
 	}
 
