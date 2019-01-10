@@ -50,10 +50,6 @@
 
 								<p/>
 								
-								<div uk-form-custom="target: true">
-									<input type="file">
-									<input class="uk-input uk-form-width-medium" type="text" placeholder="Selecionar imagem" disabled>
-								</div>
 							</div>
 
 

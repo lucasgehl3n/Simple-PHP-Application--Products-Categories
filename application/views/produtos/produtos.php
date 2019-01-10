@@ -41,7 +41,7 @@
 						<form action="<?= base_url().'index.php/Produto/buscaProdutoPorCategoria/'?>" method="post">
 							<div class="row">
 								<div class="col-md-6">
-									<select class="uk-select uk-form-large" required id="categoriaProduto" name="categoriaProduto" ">
+									<select class="uk-select uk-form-large"  id="categoriaProduto" name="categoriaProduto" required>
 
 										<option disabled selected>Pesquisar por categoria...</option>
 										<?php foreach ($categorias as $categoriaAtual) {
@@ -136,10 +136,6 @@
 ?>
 										</select>
 
-											<div uk-form-custom="target: true">
-												<input type="file">
-												<input class="uk-input uk-form-width-medium" type="text" placeholder="Selecionar imagem" disabled>
-											</div>
 									</div>
 
 

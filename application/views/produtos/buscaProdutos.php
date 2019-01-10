@@ -36,7 +36,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 				<div class="uk-card-body">
 					<ul uk-accordion>
-								<?php	for ($i=0; $i < count($produtos) ; $i++) {  
+<?php					
+					if(!empty($produtos)){
+
+								for ($i=0; $i < count($produtos) ; $i++) {  
 
 									if($i == 0){ ?> 									
 										<li class="uk-open">
@@ -58,7 +61,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 													<div class="col-md-3">
 
 														<h5><b>Quantidade disponível</b></h5>
-														<div class="offset-4"><h4><?=$produtos[$i]['quantidade']?></h4></div>
+														<h4><?=$produtos[$i]['quantidade']?></h4>
 													</div>
 
 													<div class="col-md-1">
@@ -102,7 +105,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											</li>
 										<?php	} ?>
 									</ul>
-
+<?php				}
+					else{ ?>
+					
+						<div class="alert alert-danger" role="alert">
+							Não há resultados para a sua busca. Tente outra vez.
+						</div>
+<?php 					} 
+?>
 									<br/>
 									<?= anchor('Produto/listaOpcoes', 'Voltar', array('class'=>' uk-button uk-button-secondary col-md-2')); ?>
 								</div>
