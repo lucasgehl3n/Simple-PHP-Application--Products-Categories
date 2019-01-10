@@ -19,6 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <!-- UIkit JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/js/uikit.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/js/uikit-icons.min.js"></script>
+  <link rel="icon" type="imagem/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQwQKxD4qR6ANJDRpQyX8lMXneAX6Tcw-NFYr8GuLdVNmHM-g_" />
 
   <style type="text/css">
 
