@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Novo Produto</title>
+	<title>Editar Categoria</title>
 </head>
 
 <body>
